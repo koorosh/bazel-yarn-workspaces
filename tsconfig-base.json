@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["ESNext", "DOM"],
+    "module": "commonjs",
+    "target": "es5",
+    "composite": true
+  }
+}

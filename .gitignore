@@ -1,0 +1,7 @@
+node_modules
+dist
+
+bazel-bin
+bazel-out
+bazel-testlogs
+bazel-bazel-yarn-workspaces

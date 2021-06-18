@@ -1,0 +1,14 @@
+{
+  "name": "bazel-yarn-workspaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@bazel/typescript": "^3.6.0",
+    "typescript": "^4.3.3"
+  }
+}

@@ -1,0 +1,25 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_config")
+load("@build_bazel_rules_nodejs//:index.bzl", "js_library")
+
+exports_files(["tsconfig-base.json"])
+
+ts_config(
+    name = "tsconfig",
+    src = "tsconfig-base.json",
+    visibility = ["//packages:__subpackages__"],
+)
+
+# export all packages except linked (local) packages
+filegroup(
+    name = "node_modules",
+    srcs = glob(
+        [
+            "node_modules/**",
+        ],
+        exclude = [
+            "node_modules/bar",
+            "node_modules/foo",
+        ],
+    ),
+    visibility = ["//packages:__subpackages__"],
+)
